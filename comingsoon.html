@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Coming Soon — Launching Shortly</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --lime: #32CD32; /* primary lime green */
+      --lime-700: #28b428;
+      --sky: #87CEEB; /* sky blue */
+      --bg: #ffffff;
+      --muted: #6b7280;
+      --radius: 14px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;color:#0f172a}
+
+    body{
+      background: linear-gradient(180deg, var(--bg) 0%, #f7fff5 50%);
+      display:flex;align-items:center;justify-content:center;padding:32px;
+    }
+
+    .card{
+      width:100%;max-width:980px;background:linear-gradient(180deg, rgba(255,255,255,0.9), #ffffff);border-radius:20px;box-shadow:0 20px 50px rgba(2,6,23,0.12);overflow:hidden;display:grid;grid-template-columns:1fr 420px;min-height:520px
+    }
+
+    @media (max-width:900px){
+      .card{grid-template-columns:1fr;min-height:640px}
+    }
+
+    .left{
+      padding:56px 48px;display:flex;flex-direction:column;gap:22px;background:transparent;align-items:flex-start;justify-content:center;
+    }
+
+    .logo{
+      display:flex;align-items:center;gap:12px;font-weight:700;color:var(--lime);
+    }
+
+    .logo svg{width:44px;height:44px;border-radius:10px;box-shadow:0 6px 18px rgba(50,205,50,0.12)}
+
+    h1{font-size:36px;margin:0;line-height:1.02}
+    p.lead{margin:0;color:var(--muted);font-size:16px}
+
+    .countdown{display:flex;gap:12px;margin-top:8px}
+    .countdown .unit{background:linear-gradient(180deg,rgba(50,205,50,0.08),rgba(50,205,50,0.03));border:1px solid rgba(34,197,94,0.12);padding:10px 14px;border-radius:10px;min-width:74px;text-align:center}
+    .countdown .num{font-weight:700;font-size:20px}
+    .countdown .label{font-size:12px;color:var(--muted)}
+
+    .subscribe{margin-top:18px;display:flex;gap:8px}
+    .subscribe input{flex:1;padding:12px 14px;border-radius:10px;border:1px solid #e6e8eb;font-size:15px}
+    .subscribe button{background:var(--lime);border:none;padding:12px 18px;border-radius:10px;color:white;font-weight:600;cursor:pointer}
+
+    .meta{margin-top:18px;color:var(--muted);font-size:13px}
+
+    /* right panel */
+    .right{
+      background:linear-gradient(180deg, rgba(50,205,50,0.06) 0%, rgba(135,206,235,0.06) 100%);padding:36px;display:flex;flex-direction:column;gap:18px;align-items:center;justify-content:center;position:relative
+    }
+
+    .illustration{width:220px;height:220px;border-radius:22px;background:linear-gradient(135deg,var(--lime) 0%, #b6f68b 40%, #e1f7ff 100%);display:flex;align-items:center;justify-content:center;box-shadow:0 18px 48px rgba(50,205,50,0.1);}
+    .illustration svg{width:140px;height:140px;opacity:0.98}
+
+    .right h3{margin:0}
+    .socials{display:flex;gap:12px;margin-top:6px}
+    .socials a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,0.6);text-decoration:none;color:#0f172a;font-weight:600}
+
+    footer{grid-column:1/-1;padding:18px 28px;background:linear-gradient(180deg, rgba(135,206,235,0.08), var(--sky));display:flex;align-items:center;justify-content:space-between;gap:12px}
+    footer p{margin:0;color:#04243a;font-weight:600}
+    footer small{color:#083048;opacity:0.85}
+
+    /* subtle floating shapes */
+    .shape{position:absolute;border-radius:50%;opacity:0.12;filter:blur(18px)}
+    .shape.a{width:160px;height:160px;background:var(--lime);left:-40px;top:-30px}
+    .shape.b{width:120px;height:120px;background:var(--sky);right:-50px;bottom:10px}
+
+    /* tiny animations */
+    @keyframes floaty{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+    .illustration{animation:floaty 6s ease-in-out infinite}
+
+    .powered{display:flex;gap:8px;align-items:center}
+    .badge{background:transparent;border:1px solid rgba(2,6,23,0.06);padding:8px 10px;border-radius:999px;font-weight:600}
+
+    /* small screens */
+    @media (max-width:480px){
+      h1{font-size:28px}
+      .card{border-radius:16px}
+      .illustration{width:160px;height:160px}
+    }
+
+  </style>
+</head>
+<body>
+  <div class="card" role="region" aria-label="Coming soon card">
+    <div class="left">
+      <div class="logo" aria-hidden>
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <rect width="48" height="48" rx="10" fill="var(--lime)"/>
+          <path d="M14 24c2-6 10-8 14-6 4 2 6 8 2 12-4 4-12 6-16 4s-4-8-0-10z" fill="#fff" opacity="0.95"/>
+        </svg>
+        <span>solartymeeastafrica</span>
+      </div>
+
+      <h1>It's time for solar savings — Coming soon.</h1>
+      <p class="lead">It\'s time for solar savings — Coming soon.</p>
+
+      <div class="countdown" aria-live="polite" aria-atomic="true">
+        <div class="unit"><div class="num" id="days">00</div><div class="label">Days</div></div>
+        <div class="unit"><div class="num" id="hours">00</div><div class="label">Hours</div></div>
+        <div class="unit"><div class="num" id="minutes">00</div><div class="label">Minutes</div></div>
+        <div class="unit"><div class="num" id="seconds">00</div><div class="label">Seconds</div></div>
+      </div>
+
+      <form class="subscribe" id="subscribeForm" onsubmit="return onSubscribe(event)">
+        <input id="email" type="email" placeholder="Your email address" aria-label="Email address" required>
+        <button type="submit">Notify me</button>
+      </form>
+
+      <div class="meta"> <span class="badge">Early access</span> <span style="margin-left:10px">No spam. Unsubscribe anytime.</span></div>
+
+      <div class="powered" style="margin-top:auto">
+        <small>Built with care •&nbsp;</small>
+        <small style="color:var(--muted)">We'll be ready soon.</small>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="shape a" aria-hidden></div>
+      <div class="shape b" aria-hidden></div>
+
+      <div class="illustration" aria-hidden>
+        <!-- playful rocket / launch svg -->
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <g transform="translate(6 4)">
+            <path d="M17.3 2C10.8 8.2 7.9 15.6 7.3 20.9c-.7 6 2.2 11.3 6.3 15.4 4.2 4.1 9.6 7 15.6 6.3 5.4-.6 12.7-3.4 18.9-9 0 0-4.6-8.5-11.7-15.6C33.8 4.6 17.3 2 17.3 2z" fill="#fff" opacity="0.14"/>
+            <path d="M22 12c-3 3-6 9-6 9s6-3 9-6c3-3 6-9 6-9s-6 3-9 6z" fill="#fff" opacity="0.9"/>
+            <circle cx="30" cy="18" r="3" fill="#fff" opacity="0.95"/>
+          </g>
+        </svg>
+      </div>
+
+      <h3>Almost there — thanks for your patience</h3>
+      <p style="text-align:center;color:var(--muted);max-width:320px">We’re finishing an incredible experience. Get early access and special perks by joining our list.</p>
+
+      <div class="socials" aria-hidden>
+        <a href="#" title="Twitter">T</a>
+        <a href="#" title="Instagram">I</a>
+        <a href="#" title="LinkedIn">in</a>
+      </div>
+    </div>
+
+    <footer>
+      <p>solartymeeastafrica — Coming soon</p>
+      <small>All rights reserved</small>
+    </footer>
+  </div>
+
+  <script>
+    // ---- Countdown logic ----
+    // Default target date is 30 days from now — change to your launch date
+    const target = new Date();
+    target.setDate(target.getDate() + 30);
+
+    function updateCountdown(){
+      const now = new Date();
+      const diff = Math.max(0, target - now);
+      const s = Math.floor(diff / 1000) % 60;
+      const m = Math.floor(diff / (1000 * 60)) % 60;
+      const h = Math.floor(diff / (1000 * 60 * 60)) % 24;
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      document.getElementById('days').textContent = String(d).padStart(2,'0');
+      document.getElementById('hours').textContent = String(h).padStart(2,'0');
+      document.getElementById('minutes').textContent = String(m).padStart(2,'0');
+      document.getElementById('seconds').textContent = String(s).padStart(2,'0');
+    }
+    updateCountdown();
+    setInterval(updateCountdown,1000);
+
+    // ---- Simple subscribe handler (example only) ----
+    function onSubscribe(e){
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      if(!email) return;
+      // Example: show a friendly message. Replace this with API call (Mailchimp, ConvertKit, Firestore etc.)
+      const btn = e.target.querySelector('button');
+      btn.disabled = true; btn.textContent = 'Thanks — youre on the list';
+      setTimeout(()=>{btn.disabled=false;btn.textContent='Notify me'},3000);
+      console.log('subscribe:',email);
+      return false;
+    }
+  </script>
+</body>
+</html>
